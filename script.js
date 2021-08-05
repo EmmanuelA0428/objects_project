@@ -54,7 +54,21 @@ let info = {
         }    
     },
     3: {
-        // Person #4
+       
+        firstName: "Prince",
+        lastName: "Appiah",
+        heightFeet: "4",
+        heighInches: "6",
+        favoriteFood: "Rice",
+        favoriteColor: " blue",
+        
+        
+        
+            sayFullName: function() {
+                alert("This is " + this.firstName + " " + this.lastName + ". " + "I am" + this.heightFeet + "'" + this.heighInches + " and my favaorite food is" + this.favoriteFood + ". My favorite color is") + this.favoriteColor;  }
+    
+    
+    
     },
 }
 
@@ -105,7 +119,7 @@ personB.onclick = function(event) {
 
 
     div.style.border = "solid 5px black";
-    div.style.font = "georama"
+    div.style.fontSize = "50px"
     div.style.color = "white"
     div.appendChild (p1); 
     div.appendChild (p2); 
@@ -134,8 +148,37 @@ personC.onclick = function(event) {
 
 
     div.style.border = "solid 5px black";
-    div.style.font = "georama"
+    div.style.fontSize = "50px"
     div.style.color = "white"
+    div.appendChild (p1); 
+    div.appendChild (p2); 
+    div.appendChild (p3); 
+    content.appendChild (div);
+
+
+
+}
+
+personD.onclick = function(event) {
+    content.innerHTML = "";
+    event.preventDefault();
+    let div = document.createElement("div") ;
+
+    let p1 = document.createElement ("p");
+    let p2 = document.createElement ("p");
+    let p3 = document.createElement ("p");
+
+
+    
+    p1.innerHTML = "Hi my name is " + info[3].firstName + " " + info[3].lastName + ".";
+    p2.innerHTML = "I am " + info[3].heightFeet + " feet and " + info[3].heighInches + " inches tall. ";
+    p3.innerHTML = "My favorite food is " + info[3].favoriteFood + " and my favorite colour is " + info[3].favoriteColor + ".";
+
+
+    div.style.border = "solid 5px black";
+    div.style.fontSize = "50px"
+    div.style.color = "white"
+    
     div.appendChild (p1); 
     div.appendChild (p2); 
     div.appendChild (p3); 
